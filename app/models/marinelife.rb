@@ -1,0 +1,2 @@
+class Marinelife < ApplicationRecord
+end
