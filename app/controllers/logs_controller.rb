@@ -1,6 +1,6 @@
 class LogsController < ApplicationController
     def create
-        @log = Log.create(logs_params, day_id: params[:day][:id])
+        @log = Log.create(log_params, day_id: params[:day][:id])
         render json: @log
     end
 
@@ -11,7 +11,7 @@ class LogsController < ApplicationController
     end
 
 private
-    def logs_params
-
+    def log_params
+      params.require(:log).permit(:location, :current, :visibility, :depth)
     end
 end
