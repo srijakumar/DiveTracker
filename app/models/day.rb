@@ -1,4 +1,4 @@
 class Day < ApplicationRecord
-  has_many :logs
-  has_many :marinelives
+  has_many :logs, dependent: :destroy
+  has_many :marinelives, dependent: :destroy
 end
