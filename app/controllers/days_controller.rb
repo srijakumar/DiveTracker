@@ -11,11 +11,11 @@ class DaysController < ApplicationController
     # end
 
   def create
-    byebug
-    @day = Day.new(day_params)
+    #byebug
+    day = Day.new(day_params)
 
     if day.save
-      render json: @day, status: :accepted
+      render json: day, status: :accepted
     end
   end
 
@@ -35,9 +35,10 @@ class DaysController < ApplicationController
     private
 
     def day_params
-      params.require(:day).permit(:title, :day, :location, :current, :visibility, :depth, :content, :day_id )
+      params.require(:day).permit(:title, :date, :location, :current, :visibility, :depth, :content, :day_id )
     end
 
+#    params.require(:day).permit(:title, :day, :location, :current, :visibility, :depth, :content, :day_id )
 
 
 end
