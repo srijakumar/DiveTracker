@@ -13,7 +13,7 @@ class DaysController < ApplicationController
 
   def create
 
-    byebug
+    #byebug
     day = Day.new(day_params)
 
     if day.save
