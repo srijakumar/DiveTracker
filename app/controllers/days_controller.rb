@@ -13,18 +13,19 @@ class DaysController < ApplicationController
 
   def create
 
-    #byebug
-    day = Day.new(day_params)
-
-    if day.save
-      render json: day, status: :accepted
+#byebug
+    @day = Day.new(day_params)
+#byebug
+    if @day.save
+      render json: @day, status: :accepted
     end
   end
 
     def show
         @day = Day.find(params[:id])
         #render json: @day
-        render json: @day, include: [:logs, :marinelives]
+        render json: @day
+
     end
 
     def update
@@ -38,7 +39,7 @@ class DaysController < ApplicationController
     private
 
     def day_params
-      params.require(:day).permit(:title, :date, logs_attributes: [:day_id, :location, :current, :visibility, :depth], marinelives_attributes: [:content, :day_id] )
+      params.require(:day).permit(:title, :date, :logs_attributes => [:location, :current, :visibility, :depth], :marinelives_attributes => [:content] )
     end
 
 #    params.require(:day).permit(:title, :day, :location, :current, :visibility, :depth, :content, :day_id )
