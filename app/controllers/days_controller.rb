@@ -35,6 +35,11 @@ class DaysController < ApplicationController
         end
     end
 
+    def destroy
+      @day = Day.find_by(id: params[:id])
+      @day.destroy
+    end
+
 
     private
 
