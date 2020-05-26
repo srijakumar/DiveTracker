@@ -1,9 +1,9 @@
 class LogsController < ApplicationController
 
-  def index
-      @logs = Log.all
-      render json: @logs
-  end
+  # def index
+  #     @logs = Log.all
+  #     render json: @logs
+  # end
 
     def create
         @log = Log.create(log_params, day_id: params[:day][:id])

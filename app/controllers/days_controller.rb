@@ -36,8 +36,9 @@ class DaysController < ApplicationController
     end
 
     def destroy
-      @day = Day.find_by(id: params[:id])
-      @day.destroy
+      day = Day.find_by(id: params[:id])
+      day.destroy
+      render json: day
     end
 
 
