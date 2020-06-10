@@ -12,7 +12,7 @@ class DaysController < ApplicationController
     end
 
     def create
-      @day = Day.create(date: params[:day])
+      @day = Day.create(day_params)
       render json: @day
     end
 
@@ -53,13 +53,13 @@ class DaysController < ApplicationController
 #         end
 #     end
 #
-#
-#     # private
-#     #
-#     # def day_params
-#     #   params.require(:day).permit(:title, :date, :logs_attributes => [:location, :current, :visibility, :depth], :marinelives_attributes => [:content] )
-#     # end
-#
+
+    private
+
+    def day_params
+      params.require(:day).permit(:title, :date, :logs_attributes => [:location, :current, :visibility, :depth], :marinelives_attributes => [:content] )
+    end
+
 # #    params.require(:day).permit(:title, :day, :location, :current, :visibility, :depth, :content, :day_id )
 
 

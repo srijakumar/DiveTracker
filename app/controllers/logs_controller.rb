@@ -6,7 +6,9 @@ class LogsController < ApplicationController
   end
 
     def create
-        @log = Log.create(log_params, day_id: params[:day][:id])
+      #@log = Log.create(log_params, day_id: params[:day][:id])
+      @log = Log.create(log_params.merge(day_id: params[:day][:id]))
+
         render json: @log
     end
 
