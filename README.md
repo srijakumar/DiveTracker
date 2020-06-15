@@ -1,24 +1,10 @@
-# README
+This app allows a diver to track their dives with the details/conditions of their dive as well as marine lives observed!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To access this app - 
+clone this repo for the back end - 
+https://github.com/srijakumar/DiveLog_backend
+run "rails server"
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+clone this repo for the front end - 
+https://github.com/srijakumar/DiveLog_frontend
+run "open index.html"
