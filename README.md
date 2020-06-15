@@ -1,3 +1,5 @@
+DiveTracker
+
 This app allows a diver to track their dives with the details/conditions of their dive as well as marine lives observed!
 
 To access this app - 
