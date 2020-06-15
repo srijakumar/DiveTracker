@@ -3,10 +3,10 @@ DiveTracker
 This app allows a diver to track their dives with the details/conditions of their dive as well as marine lives observed!
 
 To access this app - 
-clone this repo for the back end - 
+1. Clone this repo for the back end - 
 https://github.com/srijakumar/DiveLog_backend
-run "rails server"
+Run "rails server"
 
-clone this repo for the front end - 
+2. Clone this repo for the front end - 
 https://github.com/srijakumar/DiveLog_frontend
-run "open index.html"
+Run "open index.html"
