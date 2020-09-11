@@ -1,6 +1,6 @@
 DiveTracker
 
-This app allows a diver to track their dives with the details/conditions of their dive as well as marine lives observed!
+This app allows a diver to track their dives with the details/conditions of their dive as well as marine lives observed! Built in JS frontend and Rails backend
 
 To access this app - 
 1. Clone this repo for the back end - 
